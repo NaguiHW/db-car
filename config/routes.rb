@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :sessions,      only: [:create]
   resources :cars,          only: [:index, :create, :show, :update, :destroy]
   resources :reservations,  only: [:index, :create]
-  delete :logout,          to: "sessions#logout"
-  get    :logged_in,       to: "sessions#logged_in"
-  get    'filterBy/:type', to: "cars#filterBy"
+  delete :logout,           to: "sessions#logout"
+  get    :logged_in,        to: "sessions#logged_in"
+  get    'filterBy/:type',  to: "cars#filterBy"
+  get    'allReservations', to: "reservations#showAll"
 end

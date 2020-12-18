@@ -52,6 +52,23 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def update
+    reservation = Reservation.find(params[:id])
+
+    if reservation.update(reservation_params)
+      render json:  {
+        message: "Updated successfully."
+      }, status: 200
+    else
+      render json: {
+        error: "Something went wrong. Please try again."
+      }, status: 500
+    end
+  end
+
+  def destroy
+  end
+
   private
 
   def reservation_params

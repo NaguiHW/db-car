@@ -46,6 +46,22 @@ class CarsController < ApplicationController
     end
   end
 
+  def destroy
+    car = Car.find(params[:id])
+
+    if car.destroy
+      render json:  {
+        status: 200,
+        message: "Car was successfully deleted."
+      }
+    else
+      render json: {
+        status: 500,
+        error: "Something went wrong. Please try again."
+      }
+    end
+  end
+  
   private
 
   def car_params

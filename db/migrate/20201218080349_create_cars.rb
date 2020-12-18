@@ -10,7 +10,7 @@ class CreateCars < ActiveRecord::Migration[6.0]
       t.string :doors
       t.string :transmission
       t.string :quantity
-      t.string :imagesLink, array: true, default: []
+      t.text :imagesLink, array: true, default: [], :limit => 700000
 
       t.timestamps
     end

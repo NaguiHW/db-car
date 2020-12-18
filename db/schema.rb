@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_18_080349) do
     t.string "doors"
     t.string "transmission"
     t.string "quantity"
-    t.string "imagesLink", default: [], array: true
+    t.text "imagesLink", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

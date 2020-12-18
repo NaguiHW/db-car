@@ -14,6 +14,10 @@ class User < ApplicationRecord
 
   has_many :appointments, dependent: :destroy
 
+  def makeAdmin
+    self.update(admin: true)
+  end
+
   private
 
   def downcase_email

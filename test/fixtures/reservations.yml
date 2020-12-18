@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startDate: 2020-12-18 10:00:22
+  endDate: 2020-12-18 10:00:22
+  total: 1
+  user: one
+  car: one
+
+two:
+  startDate: 2020-12-18 10:00:22
+  endDate: 2020-12-18 10:00:22
+  total: 1
+  user: two
+  car: two

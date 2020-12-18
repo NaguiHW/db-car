@@ -13,7 +13,7 @@ class CarsController < ApplicationController
       }, status: 404
     end
   end
-  
+
   def create
     car = Car.create!(car_params)
 
@@ -22,6 +22,22 @@ class CarsController < ApplicationController
         status: :created,
         car: car
       }, status: 201
+    else
+      render json: {
+        status: 500,
+        error: "Something went wrong. Please try again."
+      }
+    end
+  end
+
+  def update
+    car = Car.find(params[:id])
+
+    if car.update(car_params)
+      render json:  {
+        status: 200,
+        message: "Updated successfully."
+      }
     else
       render json: {
         status: 500,

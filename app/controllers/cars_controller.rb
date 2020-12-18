@@ -6,7 +6,7 @@ class CarsController < ApplicationController
     if !cars.empty?
       render json: {
         cars: cars
-      }
+      }, status: 200
     else
       render json: {
         error: "Something went wrong."
@@ -24,9 +24,8 @@ class CarsController < ApplicationController
       }, status: 201
     else
       render json: {
-        status: 500,
         error: "Something went wrong. Please try again."
-      }
+      }, status: 500
     end
   end
 
@@ -35,14 +34,12 @@ class CarsController < ApplicationController
 
     if car.update(car_params)
       render json:  {
-        status: 200,
         message: "Updated successfully."
-      }
+      }, status: 200
     else
       render json: {
-        status: 500,
         error: "Something went wrong. Please try again."
-      }
+      }, status: 500
     end
   end
 
@@ -51,14 +48,26 @@ class CarsController < ApplicationController
 
     if car.destroy
       render json:  {
-        status: 200,
         message: "Car was successfully deleted."
-      }
+      }, status: 200
     else
       render json: {
-        status: 500,
         error: "Something went wrong. Please try again."
-      }
+      }, status: 500
+    end
+  end
+
+  def show
+    car = Car.where(id: params[:id])
+
+    if !car.empty?
+      render json: {
+        car: car
+      }, status: 200
+    else
+      render json: {
+        error: "Couldn't find car"
+      }, status: 404
     end
   end
   

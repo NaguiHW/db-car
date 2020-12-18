@@ -66,7 +66,21 @@ class CarsController < ApplicationController
       }, status: 200
     else
       render json: {
-        error: "Couldn't find car"
+        error: "Couldn't find the car."
+      }, status: 404
+    end
+  end
+
+  def filterBy
+    car = Car.where(carType: params[:type])
+
+    if !car.empty?
+      render json: {
+        car: car
+      }, status: 200
+    else
+      render json: {
+        error: "Something went wrong."
       }, status: 404
     end
   end

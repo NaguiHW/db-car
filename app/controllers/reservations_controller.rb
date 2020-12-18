@@ -67,6 +67,17 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    reservation = Reservation.find(params[:id])
+
+    if reservation.destroy
+      render json:  {
+        message: "Reservation was successfully deleted."
+      }, status: 200
+    else
+      render json: {
+        error: "Something went wrong. Please try again."
+      }, status: 500
+    end
   end
 
   private

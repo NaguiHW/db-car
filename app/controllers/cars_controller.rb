@@ -14,7 +14,7 @@ class CarsController < ApplicationController
   end
 
   def create
-    car = Car.create!(car_params)
+    car = Car.create!(create_params)
 
     if car
       render json: {
@@ -88,5 +88,9 @@ class CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(:model, :carType, :price, :year, :horsePower, :seats, :doors, :transmission, :quantity, :imagesLink)
+  end
+
+  def create_params
+    params.permit(:model, :carType, :price, :year, :horsePower, :seats, :doors, :transmission, :quantity, :imagesLink)
   end
 end

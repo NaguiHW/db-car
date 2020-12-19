@@ -25,7 +25,11 @@ ActiveRecord::Schema.define(version: 2020_12_18_150022) do
     t.string "doors"
     t.string "transmission"
     t.string "quantity"
-    t.text "imagesLink", default: [], array: true
+    t.string "image1"
+    t.string "image2"
+    t.string "image3"
+    t.string "image4"
+    t.string "image5"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

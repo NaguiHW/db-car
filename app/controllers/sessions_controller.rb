@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       render json: {
         status: 401,
         error: 'Email or password incorrect.'
-      }, status: 401
+      }, status: 200
     end
   end
 
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
     else
       render json: {
         logged_in: false
-      }, status: 401
+      }, status: 200
     end
   end
 

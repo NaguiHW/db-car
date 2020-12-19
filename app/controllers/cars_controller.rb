@@ -1,7 +1,6 @@
 class CarsController < ApplicationController
   def index
     cars = Car.all
-    # json_response(cars)
 
     if !cars.empty?
       render json: {
@@ -10,12 +9,12 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong."
-      }, status: 404
+      }
     end
   end
 
   def create
-    car = Car.create!(car_params)
+    car = Car.create!(create_params)
 
     if car
       render json: {
@@ -25,7 +24,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -39,7 +38,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -53,7 +52,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -67,7 +66,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Couldn't find the car."
-      }, status: 404
+      }
     end
   end
 
@@ -81,13 +80,17 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong."
-      }, status: 404
+      }
     end
   end
   
   private
 
   def car_params
-    params.require(:car).permit(:model, :carType, :price, :year, :horsePower, :seats, :doors, :transmission, :quantity, :imagesLink)
+    params.require(:car).permit(:model, :carType, :price, :year, :horsePower, :seats, :doors, :transmission, :quantity, :image1, :image2, :image3, :image4, :image5)
+  end
+
+  def create_params
+    params.permit(:model, :carType, :price, :year, :horsePower, :seats, :doors, :transmission, :quantity, :image1, :image2, :image3, :image4, :image5)
   end
 end

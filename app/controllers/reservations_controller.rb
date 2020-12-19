@@ -11,7 +11,7 @@ class ReservationsController < ApplicationController
     else
       render json: {
         error: "We couldn't find a reservation or you don't have a reservation."
-      }, status: 404
+      }
     end
   end
   
@@ -26,7 +26,7 @@ class ReservationsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -44,11 +44,11 @@ class ReservationsController < ApplicationController
     elsif !@current_user.admin
       render json: {
         error: "You don't have permission to see this."
-      }, status: 401
+      }
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -62,7 +62,7 @@ class ReservationsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -76,7 +76,7 @@ class ReservationsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 

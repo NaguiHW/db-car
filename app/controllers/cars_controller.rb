@@ -1,7 +1,6 @@
 class CarsController < ApplicationController
   def index
     cars = Car.all
-    # json_response(cars)
 
     if !cars.empty?
       render json: {
@@ -10,7 +9,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong."
-      }, status: 404
+      }
     end
   end
 
@@ -25,7 +24,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -39,7 +38,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -53,7 +52,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong. Please try again."
-      }, status: 500
+      }
     end
   end
 
@@ -67,7 +66,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Couldn't find the car."
-      }, status: 404
+      }
     end
   end
 
@@ -81,7 +80,7 @@ class CarsController < ApplicationController
     else
       render json: {
         error: "Something went wrong."
-      }, status: 404
+      }
     end
   end
   

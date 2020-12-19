@@ -7,4 +7,13 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       credentials: true
   end
+  
+  allow do
+    origins 'https://rent-a-car-b5d57.web.app'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
+  end
 end

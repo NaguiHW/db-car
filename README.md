@@ -37,7 +37,7 @@ rails s
 The server is going to be in `http://localhost:8000/`
 
 ## Endpoints (live server)
-The route of the live server is: `https://serene-bayou-97137.herokuapp.com/`
+The route of the live server is: `https://db-car.herokuapp.com/`
 - `/registrations`: to create a new user.
   - `POST`: body => user: { first_name, last_name, email, password, password_confirmation }
 - `/sessions`: to login of an existing user.

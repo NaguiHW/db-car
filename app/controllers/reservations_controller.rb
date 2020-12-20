@@ -2,10 +2,16 @@ class ReservationsController < ApplicationController
   include CurrentUserConcern
 
   def index
-    reservations =  Reservation.where(user_id: @current_user.id).find_by_sql("SELECT r.*, c.model, c.image1 FROM reservations r INNER JOIN cars c ON r.car_id = c.id")
+    reservations =  Reservation.find_by_sql("SELECT r.*, c.model, c.image1 FROM reservations r INNER JOIN cars c ON r.car_id = c.id WHERE r.user_id = #{@current_user.id}")
 
-    if !reservations.empty?
+    if reservations.empty?
       render json: {
+        length: 0,
+        message: "Yoy don't have any reservations."
+      }
+    elsif !reservations.empty?
+      render json: {
+        length: reservations.length,
         reservations: reservations
       }, status: 200
     else

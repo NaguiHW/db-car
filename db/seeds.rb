@@ -1,141 +1,141 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 
-# Car.create(
-#   model: 'Chevrolet Colorado',
-#   carType: 'Truck',
-#   price: '85',
-#   year: '2021',
-#   horsePower: '200',
-#   seats: '4',
-#   doors: '2',
-#   transmission: 'Auto',
-#   quantity: '8',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/06/2021-chevrolet-colorado-1.png?fit=around%7C875:492',
-#   image2: '',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Chevrolet Colorado',
+  carType: 'Truck',
+  price: '85',
+  year: '2021',
+  horsePower: '200',
+  seats: '4',
+  doors: '2',
+  transmission: 'Auto',
+  quantity: '8',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/06/2021-chevrolet-colorado-1.png?fit=around%7C875:492',
+  image2: '',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'GMC Canyon',
-#   carType: 'Truck',
-#   price: '80',
-#   year: '2021',
-#   horsePower: '200',
-#   seats: '4',
-#   doors: '4',
-#   transmission: 'Auto',
-#   quantity: '4',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/01/2021-GMC-Canyon-AT4-004.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/01/2021-GMC-Canyon-AT4-005.jpg?fit=around%7C875:492',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'GMC Canyon',
+  carType: 'Truck',
+  price: '80',
+  year: '2021',
+  horsePower: '200',
+  seats: '4',
+  doors: '4',
+  transmission: 'Auto',
+  quantity: '4',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/01/2021-GMC-Canyon-AT4-004.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/01/2021-GMC-Canyon-AT4-005.jpg?fit=around%7C875:492',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Kia Rio',
-#   carType: 'Sedan',
-#   price: '50',
-#   year: '2020',
-#   horsePower: '120',
-#   seats: '5',
-#   doors: '4',
-#   transmission: 'Auto',
-#   quantity: '6',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/04/14-2020-kia-rio.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/04/9-2020-kia-rio.jpg?fit=around%7C875:492',
-#   image3: 'https://www.motortrend.com/uploads/sites/5/2020/04/2-2020-kia-rio.jpg?fit=around%7C875:492',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Kia Rio',
+  carType: 'Sedan',
+  price: '50',
+  year: '2020',
+  horsePower: '120',
+  seats: '5',
+  doors: '4',
+  transmission: 'Auto',
+  quantity: '6',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/04/14-2020-kia-rio.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/04/9-2020-kia-rio.jpg?fit=around%7C875:492',
+  image3: 'https://www.motortrend.com/uploads/sites/5/2020/04/2-2020-kia-rio.jpg?fit=around%7C875:492',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Nissan Versa',
-#   carType: 'Sedan',
-#   price: '60',
-#   year: '2021',
-#   horsePower: '122',
-#   seats: '5',
-#   doors: '4',
-#   transmission: 'Manual',
-#   quantity: '7',
-#   image1: 'https://www.motortrend.com/uploads/sites/10/2020/03/2020-nissan-versa-sv-sedan-angular-front.png?fit=around%7C875:492',
-#   image2: '',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Nissan Versa',
+  carType: 'Sedan',
+  price: '60',
+  year: '2021',
+  horsePower: '122',
+  seats: '5',
+  doors: '4',
+  transmission: 'Manual',
+  quantity: '7',
+  image1: 'https://www.motortrend.com/uploads/sites/10/2020/03/2020-nissan-versa-sv-sedan-angular-front.png?fit=around%7C875:492',
+  image2: '',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Hyundai Accent',
-#   carType: 'Sedan',
-#   price: '60',
-#   year: '2021',
-#   horsePower: '120',
-#   seats: '5',
-#   doors: '4',
-#   transmission: 'Manual',
-#   quantity: '3',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/08/2021-hyundai-accent-07.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/08/2021-hyundai-accent-06.jpg?fit=around%7C875:492',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Hyundai Accent',
+  carType: 'Sedan',
+  price: '60',
+  year: '2021',
+  horsePower: '120',
+  seats: '5',
+  doors: '4',
+  transmission: 'Manual',
+  quantity: '3',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/08/2021-hyundai-accent-07.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/08/2021-hyundai-accent-06.jpg?fit=around%7C875:492',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Toyota Sienna',
-#   carType: 'Van',
-#   price: '80',
-#   year: '2021',
-#   horsePower: '245',
-#   seats: '8',
-#   doors: '4',
-#   transmission: 'Auto',
-#   quantity: '2',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/05/2021-Toyota-Sienna-XSE-14.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/05/2021-Toyota-Sienna-Platinum-2.jpg?fit=around%7C875:492',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Toyota Sienna',
+  carType: 'Van',
+  price: '80',
+  year: '2021',
+  horsePower: '245',
+  seats: '8',
+  doors: '4',
+  transmission: 'Auto',
+  quantity: '2',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/05/2021-Toyota-Sienna-XSE-14.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/05/2021-Toyota-Sienna-Platinum-2.jpg?fit=around%7C875:492',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Honda Odyssey',
-#   carType: 'Van',
-#   price: '80',
-#   year: '2021',
-#   horsePower: '280',
-#   seats: '7',
-#   doors: '4',
-#   transmission: 'Auto',
-#   quantity: '6',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-side-view-still.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-front-three-quarters.jpg?fit=around%7C875:492',
-#   image3: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-interior-view.jpg?fit=around%7C875:492',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Honda Odyssey',
+  carType: 'Van',
+  price: '80',
+  year: '2021',
+  horsePower: '280',
+  seats: '7',
+  doors: '4',
+  transmission: 'Auto',
+  quantity: '6',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-side-view-still.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-front-three-quarters.jpg?fit=around%7C875:492',
+  image3: 'https://www.motortrend.com/uploads/sites/5/2020/07/2021-Honda-Odyssey-interior-view.jpg?fit=around%7C875:492',
+  image4: '',
+  image5: ''
+)
 
-# Car.create(
-#   model: 'Chrysler Pacifica',
-#   carType: 'Van',
-#   price: '80',
-#   year: '2021',
-#   horsePower: '287',
-#   seats: '8',
-#   doors: '4',
-#   transmission: 'Auto',
-#   quantity: '4',
-#   image1: 'https://www.motortrend.com/uploads/sites/5/2020/02/2021-Chrysler-Pacifica-Hybrid-1.jpg?fit=around%7C875:492',
-#   image2: 'https://www.motortrend.com/uploads/sites/5/2020/02/2021-Chrysler-Pacifica-Pinnacle-34.jpg?fit=around%7C875:492',
-#   image3: '',
-#   image4: '',
-#   image5: ''
-# )
+Car.create(
+  model: 'Chrysler Pacifica',
+  carType: 'Van',
+  price: '80',
+  year: '2021',
+  horsePower: '287',
+  seats: '8',
+  doors: '4',
+  transmission: 'Auto',
+  quantity: '4',
+  image1: 'https://www.motortrend.com/uploads/sites/5/2020/02/2021-Chrysler-Pacifica-Hybrid-1.jpg?fit=around%7C875:492',
+  image2: 'https://www.motortrend.com/uploads/sites/5/2020/02/2021-Chrysler-Pacifica-Pinnacle-34.jpg?fit=around%7C875:492',
+  image3: '',
+  image4: '',
+  image5: ''
+)
 
 Car.create(
   model: 'Acura ILX',

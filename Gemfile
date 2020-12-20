@@ -26,6 +26,8 @@ gem 'rack-cors', require: 'rack/cors'
 
 gem 'hirb'
 
+gem 'faker', '~> 2.15', '>= 2.15.1'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

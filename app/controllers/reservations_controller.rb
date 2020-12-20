@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
   include CurrentUserConcern
 
   def index
-    reservations =  Reservation.where(user_id: @current_user.id)
+    reservations =  Reservation.where(user_id: @current_user.id).find_by_sql("SELECT r.*, c.model, c.image1 FROM reservations r INNER JOIN cars c ON r.car_id = c.id")
 
     if !reservations.empty?
       render json: {
@@ -31,7 +31,10 @@ class ReservationsController < ApplicationController
   end
 
   def showAll
-    reservations = Reservation.all
+    reservations = reservations =  Reservation.find_by_sql("SELECT r.*, c.model, c.image1, u.first_name, u.last_name
+                                                            FROM reservations r
+                                                            INNER JOIN cars c ON r.car_id = c.id
+                                                            INNER JOIN users u ON r.user_id = u.id")
 
     if @current_user.admin and !reservations.empty?
       render json: {

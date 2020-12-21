@@ -2,7 +2,18 @@ class ReservationsController < ApplicationController
   include CurrentUserConcern
 
   def index
-    reservations =  Reservation.find_by_sql("SELECT r.*, c.model, c.image1 FROM reservations r INNER JOIN cars c ON r.car_id = c.id WHERE r.user_id = #{@current_user.id}")
+    reservations = Reservation.find_by_sql("SELECT r.*, c.model, c.image1
+                                            FROM reservations r
+                                            INNER JOIN cars c
+                                            ON r.car_id = c.id
+                                            WHERE r.user_id = #{@current_user.id}")
+
+    # past_reservations = Reservation.find_by_sql("SELECT r.*, c.model, c.image1
+    #                                              FROM reservations r
+    #                                              INNER JOIN cars c
+    #                                              ON r.car_id = c.id
+    #                                              WHERE r.user_id = #{@current_user.id}
+    #                                              AND r.endDate < #{DateTime.now}")
 
     if reservations.empty?
       render json: {
@@ -13,6 +24,7 @@ class ReservationsController < ApplicationController
       render json: {
         length: reservations.length,
         reservations: reservations
+        # pastReservations: past_reservations
       }, status: 200
     else
       render json: {
@@ -37,14 +49,21 @@ class ReservationsController < ApplicationController
   end
 
   def showAll
-    reservations = reservations =  Reservation.find_by_sql("SELECT r.*, c.model, c.image1, u.first_name, u.last_name
-                                                            FROM reservations r
-                                                            INNER JOIN cars c ON r.car_id = c.id
-                                                            INNER JOIN users u ON r.user_id = u.id")
+    reservations = Reservation.find_by_sql("SELECT r.*, c.model, c.image1, u.first_name, u.last_name
+                                            FROM reservations r
+                                            INNER JOIN cars c ON r.car_id = c.id
+                                            INNER JOIN users u ON r.user_id = u.id")
+
+    # past_reservations = Reservation.find_by_sql("SELECT r.*, c.model, c.image1, u.first_name, u.last_name
+    #                                              FROM reservations r
+    #                                              INNER JOIN cars c ON r.car_id = c.id
+    #                                              INNER JOIN users u ON r.user_id = u.id
+    #                                              AND r.endDate < #{DateTime.now}")
 
     if @current_user.admin and !reservations.empty?
       render json: {
         reservations: reservations
+        # pastReservations: past_reservations
       }, status: 200
     elsif @current_user.admin and reservations.empty?
       render json: {

@@ -239,14 +239,14 @@
 #   image5: ''
 # )
 
-# User.create(
-#   first_name: 'Kalib',
-#   last_name: 'Hackin',
-#   email: "kalib@hackin.com",
-#   password: '123456',
-#   password_confirmation: '123456',
-#   admin: true
-# )
+User.create(
+  first_name: 'Kalib',
+  last_name: 'Hackin',
+  email: "kalib@hackin.com",
+  password: '123456',
+  password_confirmation: '123456',
+  admin: true
+)
 
 15.times do
   first_name = Faker::Name.first_name
@@ -259,15 +259,16 @@
     password_confirmation: '123456'
   )
   rand(1..5).times do
-    startDate = DateTime.now + rand(-10..10).days
-    endDate = startDate + rand(2..10).days
+    start_date = DateTime.now + rand(-10..10).days
+    end_date = start_date + rand(2..10).days
     car_id = rand(1..(Car.all.length - 1))
-    total = (Car.find(car_id).price.to_i * (startDate - endDate)).abs.to_s
+    total = (Car.find(car_id).price.to_i * (start_date - end_date)).abs.to_s
     user.reservations.create!(
-      startDate: startDate,
-      endDate: endDate,
+      start_date: start_date,
+      end_date: end_date,
       car_id: car_id,
       total: total
     )
+    puts "#{start_date}, #{end_date}"
   end
 end

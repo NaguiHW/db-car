@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :password_confirmation, presence: true
 
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 
   def makeAdmin
     self.update(admin: true)
